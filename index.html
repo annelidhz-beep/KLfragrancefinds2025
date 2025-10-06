@@ -3,147 +3,233 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> KL Fragrance Finds - Online Perfume Store</title>
+    <title>KL Signature Scents - Luxury Fragrance Collection</title>
+    <!-- Add Google Fonts for a sophisticated look -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        /* Basic Reset and Font */
+        /* LUXURY STYLING OVERHAUL */
         body {
-            font-family: 'Times Roman', sans-serif;
+            /* Changed to elegant font pairing */
+            font-family: 'Lato', Arial, sans-serif;
             margin: 0;
             padding: 0;
-            /* UPDATED: Background color is light blue */
-            background-color: #f4f4f4; 
-            color: #333;
+            /* UPDATED: Luxurious light nude background */
+            background-color: #fff5ee; /* Light Nude/Seashell */
+            color: #1a1a1a;
         }
 
-        /* Header Styling */
+        /* Header Styling - Rich, Deep Color (Still provides a necessary contrast) */
         header {
-            background-color: #333;
-            color: #fff;
-            padding: 20px 0;
+            background-color: #333333; /* Dark Muted Gray */
+            color: #ffffff;
+            padding: 30px 0;
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 40px;
+            /* Subtle shadow for depth */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            /* NEW: Rounded banner */
+            border-radius: 0 0 20px 20px; 
+            overflow: hidden; /* To ensure content respects border-radius */
         }
 
         header h1 {
             margin: 0;
-            font-size: 2.5em;
+            /* Elegant Serif Font for Title */
+            font-family: 'Playfair Display', serif;
+            font-size: 3.2em;
+            letter-spacing: 5px;
+            color: #c0a969; /* Gold Accent */
         }
+
+        header p {
+            font-size: 1.1em;
+            color: #ccc;
+            margin-top: 5px;
+        }
+        
+        /* Navigation Links Styling (New) */
+        .nav-link {
+            text-decoration: none;
+            font-size: 1.1em;
+            font-weight: 700;
+            padding: 5px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+            /* Add a subtle underline accent that appears on hover */
+            border-bottom: 2px solid transparent;
+        }
+
+        /* NEW: Specific colors for navigation links */
+        .nav-link-men {
+            color: #0077b6; /* Rich Sapphire Blue (Dark Blue) */
+        }
+
+        .nav-link-women {
+            color: #ff99c8; /* Light Pink */
+        }
+
+        .nav-link:hover {
+            color: #c0a969; /* Gold Accent on hover */
+            border-bottom: 2px solid #c0a969;
+        }
+
+        /* Order Link Styling (Refactored from inline) */
+        #order-link {
+            color: #c0a969; /* Gold Accent */
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: color 0.3s, background-color 0.3s;
+            padding: 8px 15px;
+            border: 2px solid #c0a969;
+            border-radius: 8px;
+            display: inline-block;
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 1px;
+        }
+        
+        #order-link:hover {
+            background-color: #c0a969; /* Solid gold background on hover */
+            color: #333333; /* Dark text for contrast */
+        }
+
 
         /* Container for content */
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 15px;
+            padding: 0 25px;
         }
 
-        /* Section Headings Styling */
+        /* Section Headings Styling - Base */
         .collection-title {
-            border-bottom: 2px solid #ccc;
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
             padding-bottom: 10px;
-            margin-top: 30px;
+            margin-top: 50px;
+            margin-bottom: 30px;
             text-align: center;
-            /* Make it bigger */
-            font-size: 2.8em; 
-        }
-
-        /* UPDATED: Men's Title Color (Blue) */
-        .men-title {
-            color: #007bff; 
+            font-size: 2.5em;
+            letter-spacing: 2px;
+            /* Ensure the ID is not visible but the link works */
+            scroll-margin-top: 100px; /* Offset for fixed headers if implemented, or just for smooth scrolling */
         }
         
-        /* UPDATED: Women's Title Color (Pink) */
-        .women-title {
-            color: #e83e8c; 
+        /* NEW: Men's Blue Accent */
+        .men-accent {
+            color: #0077b6; /* Rich Sapphire Blue */
+            border-bottom: 2px solid #0077b6;
         }
 
+        /* NEW: Women's Pink Accent */
+        .women-accent {
+            color: #e56b9c; /* Sophisticated Rose Pink */
+            border-bottom: 2px solid #e56b9c;
+        }
+        
         /* Perfume Grid/Table Styling */
         .perfume-list {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            margin-bottom: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
         }
 
         /* Styling for each perfume item */
         .perfume-item {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            /* More pronounced, luxury shadow */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
             display: flex;
             flex-direction: column;
             text-align: center;
-            border: 1px solid #ddd;
+            border: 1px solid #eee;
+        }
+
+        .perfume-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
         }
 
         .perfume-item h3 {
-            color: #000;
-            font-size: 1.2em;
+            font-family: 'Playfair Display', serif;
+            color: #1a1a1a;
+            font-size: 1.4em;
             margin-top: 0;
             min-height: 40px;
+            font-weight: 700;
         }
 
-        /* Column 1: Name and Price (First in order) */
-        .column-name {
-            order: 1;
-            font-weight: bold;
+        /* Price Styling (Order: Original Price, then Sale Price) */
+        .price-container {
+            margin-bottom: 15px;
+            font-size: 1.2em;
+            display: block;
+            min-height: 20px;
+        }
+        
+        /* STYLING FOR STRIKETHROUGH PRICE (Original Price) */
+        .original-price {
+            color: #888;
+            text-decoration: line-through;
+            font-size: 0.85em;
+            margin-right: 10px;
+            font-weight: 400;
         }
 
-        /* Column 2: Image (Second in order) */
+        /* STYLING FOR SALE PRICE (New Price) */
+        .sale-price {
+            color: #cc0000; /* Bold Red for "CHEAPER" feel */
+            font-size: 1.3em;
+            font-weight: 700;
+            display: inline-block;
+        }
+
+        /* Image Column */
         .column-picture {
             order: 2;
-            margin: 10px 0;
-            background-color: #e0e0e0; 
+            margin: 15px 0;
+            background-color: #f0f0f0;
             min-height: 250px;
             display: flex;
             align-items: center;
             justify-content: center;
             color: #888;
             font-size: 0.9em;
-            border-radius: 4px;
+            border-radius: 6px;
+            overflow: hidden;
         }
 
         .column-picture img {
             max-width: 100%;
             height: auto;
             border-radius: 4px;
-            border: 1px solid #eee;
             max-height: 250px;
             object-fit: contain;
         }
         
-        .image-placeholder {
-            padding: 20px;
-        }
-
-
-        /* Column 3: Description and Notes (Third in order) */
+        /* Column 3: Description and Notes */
         .column-description {
             order: 3;
             text-align: left;
             font-size: 0.9em;
-            flex-grow: 1; 
-            margin-bottom: 15px; /* Added margin since button is gone */
+            flex-grow: 1;
+            margin-bottom: 15px;
+            line-height: 1.6;
         }
 
         .column-description strong {
             display: block;
-            margin-top: 5px;
-            color: #777;
-        }
-
-        .price {
-            color: #b12704;
-            font-size: 1.1em;
-            margin-bottom: 10px;
-            display: block;
+            margin-top: 10px;
+            color: #c0a969; /* Gold Accent for 'Notes' header */
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
         }
         
-        /* The .buy-button class and styling is no longer needed but kept 
-           in case you want to reuse it later, though it is removed 
-           from the HTML below. */
-        .buy-button {
-            display: none; /* Hides any element with this class */
+        .column-description p {
+            margin: 5px 0;
         }
 
 
@@ -153,12 +239,8 @@
                 grid-template-columns: 1fr;
             }
 
-            .perfume-item {
-                flex-direction: column; 
-            }
-
-            .column-description {
-                text-align: center;
+            .collection-title {
+                font-size: 2em;
             }
         }
 
@@ -167,21 +249,128 @@
 <body>
 
     <header>
-        <h1> <i> KL FRAGRANCE FINDS </i> </h1>
-        <p>Your destination for authentic, high-quality fragrances.</p>
-        <p> PASABUY FROM DUBAI. ETA - DECEMBER 2025 <p/>
+        <!-- FLAGS REMOVED -->
+        <h1> <i> KL Signature Scents </i> </h1>
+        <p>Your destination for authentic, high-quality luxury fragrances.</p>
+        <p>PASABUY FROM DUBAI. ETA - DECEMBER 2025</p>
+        
+        <!-- NAVIGATION LINKS -->
+        <nav style="margin: 20px 0 10px; display: flex; justify-content: center; gap: 25px;">
+            <a href="#men-collection" class="nav-link nav-link-men">MEN'S COLLECTION</a>
+            <a href="#women-collection" class="nav-link nav-link-women">WOMEN'S COLLECTION</a>
+        </nav>
+        
+        <!-- ORDER NOW Link -->
+        <p style="margin-top: 15px; font-weight: bold;">
+            <a href="https://docs.google.com/forms/d/19kxAvg1pwCq5xoIT28n8PM_yqy74KuYi2BHVT5Ejz7w" 
+               target="_blank" 
+               id="order-link">
+                ORDER NOW
+            </a>
+        </p>
     </header>
 
     <div class="container">
         
-        <h2 class="collection-title men-title">Men's Collection</h2>
+        <!-- MEN'S COLLECTION TARGET ANCHOR ADDED -->
+        <h2 class="collection-title men-accent" id="men-collection">Men's Collection</h2>
 
         <div class="perfume-list">
 
+            <!-- NEW PRODUCT 1: Gentleman EDP Givenchy (Complete) -->
+            <div class="perfume-item">
+                <div class="column-name">
+                    <h3>Gentleman EDP Givenchy (Complete) 100ml</h3>
+                    <div class="price-container">
+                        <span class="original-price">PHP 6,863.00</span> 
+                        <span class="sale-price">PHP 6,100.00</span>
+                    </div>
+                </div>
+                <div class="column-picture">
+                    <img src="gentleman_givenchy_edp_box.jpg" alt="Gentleman EDP Givenchy for men 100ml Complete with box">
+                </div>
+                <div class="column-description">
+                    <p>A sophisticated, powerful, and sensual **Floral Woody Musk** fragrance. A modern classic for the gentleman who commands respect.</p>
+                    <strong>Notes:</strong>
+                    <p><strong>Top:</strong> Black Pepper, Lavender, Bergamot.<br>
+                        <strong>Heart:</strong> Orris, Cinnamon, Clove.<br>
+                        <strong>Base:</strong> Black Vanilla Husk, Tolu Balsam, Patchouli, Benzoin.</p>
+                    </div>
+            </div>
+
+            <!-- NEW PRODUCT 2: Gentleman EDP Givenchy (Tester) -->
+            <div class="perfume-item">
+                <div class="column-name">
+                    <h3>Gentleman EDP Givenchy (Tester) 100ml</h3>
+                    <div class="price-container">
+                        <span class="original-price">PHP 6,188.00</span> 
+                        <span class="sale-price">PHP 5,500.00</span>
+                    </div>
+                </div>
+                <div class="column-picture">
+                    <img src="gentleman_givenchy_edp_tester.jpg" alt="Gentleman EDP Givenchy for men 100ml Tester Price">
+                </div>
+                <div class="column-description">
+                    <p>The same distinguished aroma as the boxed version, available at a special **tester price**. Perfect for personal use.</p>
+                    <strong>Notes:</strong>
+                    <p><strong>Top:</strong> Black Pepper, Lavender, Bergamot.<br>
+                        <strong>Heart:</strong> Orris, Cinnamon, Clove.<br>
+                        <strong>Base:</strong> Black Vanilla Husk, Tolu Balsam, Patchouli, Benzoin.</p>
+                    </div>
+            </div>
+
+            <!-- UPDATED PRODUCT 3: Valentino Uomo Born In Roma Intense -->
+            <div class="perfume-item">
+                <div class="column-name">
+                    <h3>Valentino Uomo Born In Roma Intense 100ml</h3>
+                    <div class="price-container">
+                        <span class="original-price"></span>
+                        <span class="sale-price">Price TBA</span>
+                    </div>
+                </div>
+                <div class="column-picture">
+                    <img src="valentino_uomo_intense.jpg" alt="Valentino Uomo Born In Roma Intense Perfume Bottle">
+                </div>
+                <div class="column-description">
+                    <p>A vibrant, woody-oriental fragrance that captures the magnetic sensuality of Rome's night. A captivating and addictive vanilla-vetiver signature.</p>
+                    <strong>Notes:</strong>
+                    <p>
+                        <strong>Top:</strong> Vanilla Bourbon (powerful vanilla infusion) and an Ambery accord.<br>
+                        <strong>Heart:</strong> Lavandin (aromatic lavender), Salty accord, Nutmeg.<br>
+                        <strong>Base:</strong> Smoked Vetiver (woody, leathery, smoky grounding).
+                    </p>
+                    </div>
+            </div>
+
+            <!-- NEW PRODUCT 4: Le Male Elixir Jean Paul Gaultier -->
+            <div class="perfume-item">
+                <div class="column-name">
+                    <h3>Le Male Elixir Jean Paul Gaultier 125ml</h3>
+                    <div class="price-container">
+                        <span class="original-price"></span>
+                        <span class="sale-price">Price TBA</span>
+                    </div>
+                </div>
+                <div class="column-picture">
+                    <img src="le_male_elixir_jpg.jpg" alt="Le Male Elixir Jean Paul Gaultier for men 125ml">
+                </div>
+                <div class="column-description">
+                    <p>An intense, fiery, and highly seductive Amber Fougere fragrance. Features a rich blend of woods and spices, embodying the height of masculine sensuality.</p>
+                    <strong>Notes:</strong>
+                    <p><strong>Top:</strong> Lavender, Mint.<br>
+                        <strong>Heart:</strong> Vanilla, Benzoin.<br>
+                        <strong>Base:</strong> Honey, Tobacco, Tonka Bean.</p>
+                    </div>
+            </div>
+
+            <!-- Existing Products (Retained) -->
             <div class="perfume-item">
                 <div class="column-name">
                     <h3>Creed Aventus EDP 100ml</h3>
-                    <span class="price">PHP 17,000.00</span>
+                    <div class="price-container">
+                        <span class="original-price">PHP 19,125.00</span> 
+                        <span class="sale-price">PHP 17,000.00</span>
+                    </div>
                 </div>
                 <div class="column-picture">
                     <img src="creed_aventus.jpg" alt="Creed Aventus Perfume Bottle">
@@ -190,15 +379,18 @@
                     <p>Aventus celebrates **strength, vision, and success**. This provocative, masculine, and optimistic fragrance is a modern classic.</p>
                     <strong>Notes:</strong>
                     <p><strong>Top:</strong> Black Currant, Bergamot, Apple, Pineapple.<br>
-                       <strong>Heart:</strong> Rose, Dry Birch, Moroccan Jasmine, Patchouli.<br>
-                       <strong>Base:</strong> Oakmoss, Musk, Ambergris, Vanilla.</p>
+                        <strong>Heart:</strong> Rose, Dry Birch, Moroccan Jasmine, Patchouli.<br>
+                        <strong>Base:</strong> Oakmoss, Musk, Ambergris, Vanilla.</p>
                     </div>
             </div>
 
             <div class="perfume-item">
                 <div class="column-name">
                     <h3>Bleu de Chanel EDP 100ml</h3>
-                    <span class="price">PHP 10,500.00</span>
+                    <div class="price-container">
+                        <span class="original-price">PHP 11,813.00</span> 
+                        <span class="sale-price">PHP 10,500.00</span>
+                    </div>
                 </div>
                 <div class="column-picture">
                     <img src="bleu_de_chanel_edp.jpg" alt="Bleu de Chanel Eau de Parfum Bottle">
@@ -207,30 +399,40 @@
                     <p>A sophisticated and contemporary woody-aromatic scent dedicated to **endless, deep, and boundless freedom**. Enriched with depth and velvet amber woods.</p>
                     <strong>Notes:</strong>
                     <p><strong>Top:</strong> Grapefruit, Lemon, Mint, Pink Pepper.<br>
-                       <strong>Heart:</strong> Ginger, Jasmine, Nutmeg, Melon.<br>
-                       <strong>Base:</strong> Incense, Amber, Cedar, Sandalwood, Patchouli.</p>
+                        <strong>Heart:</strong> Ginger, Jasmine, Nutmeg, Melon.<br>
+                        <strong>Base:</strong> Incense, Amber, Cedar, Sandalwood, Patchouli.</p>
                     </div>
             </div>
 
             <div class="perfume-item">
                 <div class="column-name">
                     <h3>Bleu de Chanel EDT 100ml</h3>
-                    <span class="price">PHP 8,500.00</span>
+                    <div class="price-container">
+                        <span class="original-price">PHP 9,563.00</span> 
+                        <span class="sale-price">PHP 8,500.00</span>
+                    </div>
                 </div>
                 <div class="column-picture">
                     <img src="bleu_de_chanel_edt.jpg" alt="Bleu de Chanel Eau de Toilette Bottle">
                 </div>
                 <div class="column-description">
-                    <p>The original expression of the scent of freedom, featuring a **fresh and clean** aromatic-woody trail. Lighter and more invigorating than the EDP.</p>
+                    <p>The original expression of the scent of freedom, featuring a **fresh and clean Woody Aromatic** trail. Lighter and more invigorating than the EDP.</p>
                     <strong>Notes:</strong>
-                    <p>Prominent notes include **Citrus, Vetiver, Cedar, and Pink Pepper**.</p>
+                    <p>
+                        <strong>Top:</strong> Lemon, Grapefruit, Mint, Pink Pepper.<br>
+                        <strong>Heart:</strong> Ginger, Nutmeg, Jasmine, Iso E Super.<br>
+                        <strong>Base:</strong> Incense, Vetiver, Cedar, Sandalwood, Patchouli, Labdanum.
+                    </p>
                     </div>
             </div>
 
             <div class="perfume-item">
                 <div class="column-name">
                     <h3>Terre d'Hermès EDT 100ml</h3>
-                    <span class="price">PHP 7,000.00</span>
+                    <div class="price-container">
+                        <span class="original-price">PHP 7,875.00</span> 
+                        <span class="sale-price">PHP 7,000.00</span>
+                    </div>
                 </div>
                 <div class="column-picture">
                     <img src="terre_dhermes.jpg" alt="Terre d'Hermès Perfume Bottle">
@@ -239,32 +441,38 @@
                     <p>Embodies the **connection between man and earth**. A harmonious blend offering a vibrant citrus opening, spicy heart, and warm, woody base for earthy elegance.</p>
                     <strong>Notes:</strong>
                     <p><strong>Top:</strong> Orange, Grapefruit.<br>
-                       <strong>Heart:</strong> Pepper, Pelargonium, Flint.<br>
-                       <strong>Base:</strong> Vetiver, Cedar, Patchouli, Benzoin.</p>
+                        <strong>Heart:</strong> Pepper, Pelargonium, Flint.<br>
+                        <strong>Base:</strong> Vetiver, Cedar, Patchouli, Benzoin.</p>
                     </div>
             </div>
 
             <div class="perfume-item">
                 <div class="column-name">
                     <h3>Stronger With You Intensely 100ml</h3>
-                    <span class="price">PHP 7,500.00</span>
+                    <div class="price-container">
+                        <span class="original-price">PHP 8,438.00</span> 
+                        <span class="sale-price">PHP 7,500.00</span>
+                    </div>
                 </div>
                 <div class="column-picture">
                     <img src="stronger_with_you_intensely.jpg" alt="Emporio Armani Stronger With You Intensely Bottle">
                 </div>
                 <div class="column-description">
-                    <p>A captivating **woody oriental** fragrance that exudes a magnetic allure. Crafted for strong, confident personalities, blending richness and sophistication.</p>
+                    <p>A captivating **woody oriental** fragrance that exuded a magnetic allure. Crafted for strong, confident personalities, blending richness and sophistication.</p>
                     <strong>Notes:</strong>
                     <p><strong>Top:</strong> Spices, Juniper, Violet.<br>
-                       <strong>Heart:</strong> Lavender, Caramel, Cinnamon.<br>
-                       <strong>Base:</strong> Vanilla, Suede, Amber.</p>
+                        <strong>Heart:</strong> Lavender, Caramel, Cinnamon.<br>
+                        <strong>Base:</strong> Vanilla, Suede, Amber.</p>
                     </div>
             </div>
 
             <div class="perfume-item">
                 <div class="column-name">
                     <h3>Acqua Di Gio EDT 100ml</h3>
-                    <span class="price">PHP 6,000.00</span>
+                    <div class="price-container">
+                        <span class="original-price">PHP 6,750.00</span> 
+                        <span class="sale-price">PHP 6,000.00</span>
+                    </div>
                 </div>
                 <div class="column-picture">
                     <img src="acqua_di_gio.jpg" alt="Giorgio Armani Acqua Di Gio Bottle">
@@ -273,15 +481,18 @@
                     <p>An **iconic aquatic** scent, capturing the full power of the sea. A mythical, fresh fragrance with a stimulating blend of marine freshness and sensual patchouli.</p>
                     <strong>Notes:</strong>
                     <p><strong>Top:</strong> Bergamot, Tangerine, Neroli.<br>
-                       <strong>Heart:</strong> Marine, Jasmine, Rosemary.<br>
-                       <strong>Base:</strong> Cedar, Patchouli.</p>
+                        <strong>Heart:</strong> Marine, Jasmine, Rosemary.<br>
+                        <strong>Base:</strong> Cedar, Patchouli.</p>
                     </div>
             </div>
 
             <div class="perfume-item">
                 <div class="column-name">
                     <h3>The One for Men EDP 100ml</h3>
-                    <span class="price">PHP 5,800.00</span>
+                    <div class="price-container">
+                        <span class="original-price">PHP 6,525.00</span> 
+                        <span class="sale-price">PHP 5,800.00</span>
+                    </div>
                 </div>
                 <div class="column-picture">
                     <img src="the_one_edp.jpg" alt="Dolce&Gabbana The One for Men Bottle">
@@ -290,15 +501,18 @@
                     <p>A deep, rich, and intense version of the classic. This **woody-spicy** fragrance reflects elegance and charm, ideal for the modern and luxurious man.</p>
                     <strong>Notes:</strong>
                     <p><strong>Top:</strong> Grapefruit, Coriander, Basil.<br>
-                       <strong>Heart:</strong> Cardamom, Ginger, Orange Blossom.<br>
-                       <strong>Base:</strong> Amber, Tobacco, Cedarwood.</p>
+                        <strong>Heart:</strong> Cardamom, Ginger, Orange Blossom.<br>
+                        <strong>Base:</strong> Amber, Tobacco, Cedarwood.</p>
                     </div>
             </div>
 
             <div class="perfume-item">
                 <div class="column-name">
                     <h3>Explorer Montblanc EDP 100ml</h3>
-                    <span class="price">PHP 5,000.00</span>
+                    <div class="price-container">
+                        <span class="original-price">PHP 5,625.00</span> 
+                        <span class="sale-price">PHP 5,000.00</span>
+                    </div>
                 </div>
                 <div class="column-picture">
                     <img src="montblanc_explorer.jpg" alt="Montblanc Explorer Perfume Bottle">
@@ -307,15 +521,18 @@
                     <p>An **adventurous woody-aromatic** scent with a spirit of exploration. Starts fresh and develops into a heart of vetiver and leather, settling into warm ambroxan and patchouli.</p>
                     <strong>Notes:</strong>
                     <p><strong>Top:</strong> Bergamot, Pink Pepper, Clary Sage.<br>
-                       <strong>Heart:</strong> Haitian Vetiver, Leather.<br>
-                       <strong>Base:</strong> Ambroxan, Patchouli Leaf, Cacao Pod.</p>
+                        <strong>Heart:</strong> Haitian Vetiver, Leather.<br>
+                        <strong>Base:</strong> Ambroxan, Patchouli Leaf, Cacao Pod.</p>
                     </div>
             </div>
 
             <div class="perfume-item">
                 <div class="column-name">
                     <h3>Dior Homme Intense 100ml</h3>
-                    <span class="price">PHP 8,900.00</span>
+                    <div class="price-container">
+                        <span class="original-price">PHP 10,013.00</span> 
+                        <span class="sale-price">PHP 8,900.00</span>
+                    </div>
                 </div>
                 <div class="column-picture">
                     <img src="dior_homme_intense.jpg" alt="Dior Homme Intense Perfume Bottle">
@@ -324,15 +541,18 @@
                     <p>A refined and luxurious fragrance designed for the modern gentleman, a masterpiece with a sophisticated and **timeless powdery, woody, and floral aroma**.</p>
                     <strong>Notes:</strong>
                     <p><strong>Top:</strong> Fresh Iris, Vibrant Lavender.<br>
-                       <strong>Heart:</strong> Warm Amber, Sensual Leather.<br>
-                       <strong>Base:</strong> Woody Vetiver, Sweet Vanilla.</p>
+                        <strong>Heart:</strong> Warm Amber, Sensual Leather.<br>
+                        <strong>Base:</strong> Woody Vetiver, Sweet Vanilla.</p>
                     </div>
             </div>
 
             <div class="perfume-item">
                 <div class="column-name">
                     <h3>Luna Rossa Black Prada 100ml</h3>
-                    <span class="price">PHP 6,500.00</span>
+                    <div class="price-container">
+                        <span class="original-price">PHP 7,313.00</span> 
+                        <span class="sale-price">PHP 6,500.00</span>
+                    </div>
                 </div>
                 <div class="column-picture">
                     <img src="luna_rossa_black.jpg" alt="Luna Rossa Black Perfume Bottle">
@@ -341,15 +561,18 @@
                     <p>An **Amber Woody** fragrance for men, Luna Rossa Black evokes the magnetic energy of the city at night. It's a rich, sophisticated, and urban scent.</p>
                     <strong>Notes:</strong>
                     <p><strong>Top:</strong> Bergamot.<br>
-                       <strong>Heart:</strong> Angelica, Patchouli.<br>
-                       <strong>Base:</strong> Coumarin, Amber, Musk.</p>
+                        <strong>Heart:</strong> Angelica, Patchouli.<br>
+                        <strong>Base:</strong> Coumarin, Amber, Musk.</p>
                     </div>
             </div>
 
             <div class="perfume-item">
                 <div class="column-name">
                     <h3>Azzaro The Most Wanted 100ml</h3>
-                    <span class="price">PHP 5,000.00</span>
+                    <div class="price-container">
+                        <span class="original-price">PHP 5,625.00</span> 
+                        <span class="sale-price">PHP 5,000.00</span>
+                    </div>
                 </div>
                 <div class="column-picture">
                     <img src="azzaro_most_wanted.jpg" alt="Azzaro The Most Wanted Perfume Bottle">
@@ -358,15 +581,18 @@
                     <p>A captivating **woody aromatic** scent embodying sophistication and boldness. Features an irresistible blend of spices, sweet toffee, and a warm amberwood finish.</p>
                     <strong>Notes:</strong>
                     <p><strong>Top:</strong> Cardamom.<br>
-                       <strong>Heart:</strong> Toffee.<br>
-                       <strong>Base:</strong> Amberwood.</p>
+                        <strong>Heart:</strong> Toffee.<br>
+                        <strong>Base:</strong> Amberwood.</p>
                     </div>
             </div>
 
             <div class="perfume-item">
                 <div class="column-name">
                     <h3>Prada L'Homme 100ml</h3>
-                    <span class="price">PHP 6,000.00</span>
+                    <div class="price-container">
+                        <span class="original-price">PHP 6,750.00</span> 
+                        <span class="sale-price">PHP 6,000.00</span>
+                    </div>
                 </div>
                 <div class="column-picture">
                     <img src="prada_lhomme.jpg" alt="Prada L'Homme Perfume Bottle">
@@ -375,15 +601,18 @@
                     <p>A modern **Woody Chypre** scent combining the classic Prada ingredients—**amber and iris**. Described as airy, clean, and relaxed, perfect for the office or an evening out.</p>
                     <strong>Notes:</strong>
                     <p><strong>Top:</strong> Neroli, Black Pepper, Cardamom.<br>
-                       <strong>Heart:</strong> Iris, Violet, Geranium, Mate.<br>
-                       <strong>Base:</strong> Amber, Cedar, Sandalwood, Patchouli.</p>
+                        <strong>Heart:</strong> Iris, Violet, Geranium, Mate.<br>
+                        <strong>Base:</strong> Amber, Cedar, Sandalwood, Patchouli.</p>
                     </div>
             </div>
 
             <div class="perfume-item">
                 <div class="column-name">
                     <h3>Versace Pour Homme EDT 100ml</h3>
-                    <span class="price">PHP 4,400.00</span>
+                    <div class="price-container">
+                        <span class="original-price">PHP 4,950.00</span> 
+                        <span class="sale-price">PHP 4,400.00</span>
+                    </div>
                 </div>
                 <div class="column-picture">
                     <img src="versace_pour_homme.jpg" alt="Versace Pour Homme Perfume Bottle">
@@ -392,15 +621,18 @@
                     <p>A sophisticated and timeless **aromatic fougère** embodying Mediterranean masculinity. Opens with a refreshing citrus burst and settles into a sensual musky base.</p>
                     <strong>Notes:</strong>
                     <p><strong>Top:</strong> Lemon, Bergamot, Neroli.<br>
-                       <strong>Heart:</strong> Geranium, Cedarwood.<br>
-                       <strong>Base:</strong> Amber, Musk, Tonka Bean.</p>
+                        <strong>Heart:</strong> Geranium, Cedarwood.<br>
+                        <strong>Base:</strong> Amber, Musk, Tonka Bean.</p>
                     </div>
             </div>
 
             <div class="perfume-item">
                 <div class="column-name">
                     <h3>Y EDP YSL 100ml</h3>
-                    <span class="price">PHP 6,500.00</span>
+                    <div class="price-container">
+                        <span class="original-price">PHP 7,313.00</span> 
+                        <span class="sale-price">PHP 6,500.00</span>
+                    </div>
                 </div>
                 <div class="column-picture">
                     <img src="ysl_y_edp.jpg" alt="Y EDP YSL Perfume Bottle">
@@ -409,15 +641,18 @@
                     <p>An **Aromatic Fougere** fragrance that is fresh, yet deeply masculine. A bold and clean scent that represents the modern man who dares to follow his passions.</p>
                     <strong>Notes:</strong>
                     <p><strong>Top:</strong> Apple, Ginger, Bergamot.<br>
-                       <strong>Heart:</strong> Sage, Juniper Berries, Geranium.<br>
-                       <strong>Base:</strong> Amberwood, Tonka Bean, Cedar, Vetiver.</p>
+                        <strong>Heart:</strong> Sage, Juniper Berries, Geranium.<br>
+                        <strong>Base:</strong> Amberwood, Tonka Bean, Cedar, Vetiver.</p>
                     </div>
             </div>
 
             <div class="perfume-item">
                 <div class="column-name">
                     <h3>Versace Eros EDP 100ml</h3>
-                    <span class="price">PHP 4,800.00</span>
+                    <div class="price-container">
+                        <span class="original-price">PHP 5,400.00</span> 
+                        <span class="sale-price">PHP 4,800.00</span>
+                    </div>
                 </div>
                 <div class="column-picture">
                     <img src="versace_eros_edp.jpg" alt="Versace Eros Eau de Parfum Bottle">
@@ -426,15 +661,18 @@
                     <p>A masculine, bold, and **passionate sensual scent** that fuses woody, oriental, and fresh notes, evoking Eros—the god of love.</p>
                     <strong>Notes:</strong>
                     <p><strong>Top:</strong> Mint, Candy Apple, Lemon, Mandarin Orange.<br>
-                       <strong>Heart:</strong> Ambroxan, Clary Sage, Geranium.<br>
-                       <strong>Base:</strong> Vanilla, Sandalwood, Cedar, Patchouli, Leather.</p>
+                        <strong>Heart:</strong> Ambroxan, Clary Sage, Geranium.<br>
+                        <strong>Base:</strong> Vanilla, Sandalwood, Cedar, Patchouli, Leather.</p>
                     </div>
             </div>
 
             <div class="perfume-item">
                 <div class="column-name">
                     <h3>Versace Eros EDT 100ml</h3>
-                    <span class="price">PHP 4,200.00</span>
+                    <div class="price-container">
+                        <span class="original-price">PHP 4,725.00</span> 
+                        <span class="sale-price">PHP 4,200.00</span>
+                    </div>
                 </div>
                 <div class="column-picture">
                     <img src="versace_eros_edt.jpg" alt="Versace Eros Eau de Toilette Bottle">
@@ -449,7 +687,10 @@
             <div class="perfume-item">
                 <div class="column-name">
                     <h3>Dior Sauvage EDP 100ml</h3>
-                    <span class="price">PHP 8,200.00</span>
+                    <div class="price-container">
+                        <span class="original-price">PHP 9,225.00</span> 
+                        <span class="sale-price">PHP 8,200.00</span>
+                    </div>
                 </div>
                 <div class="column-picture">
                     <img src="dior_sauvage_edp.jpg" alt="Dior Sauvage Eau de Parfum Bottle">
@@ -458,15 +699,18 @@
                     <p>An **Oriental Fougere** inspired by the magic hour of twilight in the desert. Exudes sensual and mysterious facets with spicy notes and smoky accents of vanilla.</p>
                     <strong>Notes:</strong>
                     <p><strong>Top:</strong> Bergamot.<br>
-                       <strong>Heart:</strong> Sichuan Pepper, Lavender, Nutmeg.<br>
-                       <strong>Base:</strong> Ambroxan, Vanilla.</p>
+                        <strong>Heart:</strong> Sichuan Pepper, Lavender, Nutmeg.<br>
+                        <strong>Base:</strong> Ambroxan, Vanilla.</p>
                     </div>
             </div>
 
             <div class="perfume-item">
                 <div class="column-name">
                     <h3>Dior Sauvage EDT 100ml</h3>
-                    <span class="price">PHP 6,800.00</span>
+                    <div class="price-container">
+                        <span class="original-price">PHP 7,650.00</span> 
+                        <span class="sale-price">PHP 6,800.00</span>
+                    </div>
                 </div>
                 <div class="column-picture">
                     <img src="dior_sauvage_edt.jpg" alt="Dior Sauvage Eau de Toilette Bottle">
@@ -481,7 +725,10 @@
             <div class="perfume-item">
                 <div class="column-name">
                     <h3>Lacoste L.12.12. White 100ml</h3>
-                    <span class="price">PHP 4,000.00</span>
+                    <div class="price-container">
+                        <span class="original-price">PHP 4,500.00</span> 
+                        <span class="sale-price">PHP 4,000.00</span>
+                    </div>
                 </div>
                 <div class="column-picture">
                     <img src="lacoste_l1212_white.jpg" alt="Eau de Lacoste L.12.12. White Bottle">
@@ -490,19 +737,110 @@
                     <p>A distinguished **Woody Aromatic** fragrance that encapsulates timeless sophistication, simplicity, and freshness. Evokes a manly aroma of leadership and charm.</p>
                     <strong>Notes:</strong>
                     <p><strong>Top:</strong> Grapefruit, Rosemary, Cardamom.<br>
-                       <strong>Heart:</strong> Ylang-Ylang, Tuberose.<br>
-                       <strong>Base:</strong> Virginia Cedar, Suede, Vetiver, Leather.</p>
+                        <strong>Heart:</strong> Ylang-Ylang, Tuberose.<br>
+                        <strong>Base:</strong> Virginia Cedar, Suede, Vetiver, Leather.</p>
                     </div>
             </div>
             
-        </div> <h2 class="collection-title women-title">Women's Collection</h2>
+        </div>
+        
+        <!-- --- WOMEN'S COLLECTION --- -->
+        
+        <!-- WOMEN'S COLLECTION TARGET ANCHOR ADDED -->
+        <h2 class="collection-title women-accent" id="women-collection">Women's Collection</h2>
 
         <div class="perfume-list">
 
+            <!-- NEW PRODUCT 5: Bvlgari Omnia Crystalline Eau de Parfum -->
+            <div class="perfume-item">
+                <div class="column-name">
+                    <h3>Bvlgari Omnia Crystalline EDP 65ml</h3>
+                    <div class="price-container">
+                        <span class="original-price">PHP 9,550.00</span> 
+                        <span class="sale-price">PHP 7000.00</span>
+                    </div>
+                </div>
+                <div class="column-picture">
+                    <img src="bvlgari_omnia_crystalline_edp.jpg" alt="Bvlgari Omnia Crystalline Eau de Parfum - 65ml">
+                </div>
+                <div class="column-description">
+                    <p>Inspired by the clarity of crystal, this **Floral Woody Musk** scent is luminous and elegant. A delicate balance of aquatic freshness and light woods.</p>
+                    <strong>Notes:</strong>
+                    <p><strong>Top:</strong> Lotus, Mandarin Orange.<br>
+                        <strong>Heart:</strong> Heliotrope, Orris Root.<br>
+                        <strong>Base:</strong> Sandalwood, Musk, Siam Benzoin.</p>
+                    </div>
+            </div>
+
+            <!-- NEW PRODUCT 6: Miss Dior Eau de Parfum (2021) Dior -->
+            <div class="perfume-item">
+                <div class="column-name">
+                    <h3>Miss Dior EDP (2021) 100ml</h3>
+                    <div class="price-container">
+                        <span class="original-price"></span>
+                        <span class="sale-price">Price TBA</span>
+                    </div>
+                </div>
+                <div class="column-picture">
+                    <img src="miss_dior_edp_2021.jpg" alt="Miss Dior Eau de Parfum (2021) Dior for women - 100ml">
+                </div>
+                <div class="column-description">
+                    <p>The latest iteration of the iconic Miss Dior, an intense, **lush floral bouquet** with vibrant, fresh notes. A celebration of a confident and loving woman.</p>
+                    <strong>Notes:</strong>
+                    <p><strong>Top:</strong> Iris, Peony, Lily-of-the-Valley.<br>
+                        <strong>Heart:</strong> Centifolia Rose, Peach, Apricot.<br>
+                        <strong>Base:</strong> Vanilla, Tonka Bean, Musk.</p>
+                    </div>
+            </div>
+
+            <!-- NEW PRODUCT 7: Chance Eau Tendre EDT Chanel -->
+            <div class="perfume-item">
+                <div class="column-name">
+                    <h3>Chance Eau Tendre EDT Chanel 100ml</h3>
+                    <div class="price-container">
+                        <span class="original-price"></span>
+                        <span class="sale-price">Price TBA</span>
+                    </div>
+                </div>
+                <div class="column-picture">
+                    <img src="chance_edt_chanel.jpg" alt="Chance Eau Tendre EDT Chanel for women - 100ml">
+                </div>
+                <div class="column-description">
+                    <p>A soft, yet vibrant **Floral-Fruity** fragrance. It's a delicate composition that is endlessly fresh and radiates romance and tenderness.</p>
+                    <strong>Notes:</strong>
+                    <p><strong>Top:</strong> Grapefruit, Quince.<br>
+                        <strong>Heart:</strong> Jasmine, Hyacinth.<br>
+                        <strong>Base:</strong> Musk, Iris, Virginian Cedar, Amber.</p>
+                    </div>
+            </div>
+
+            <!-- NEW PRODUCT 8: Chance Eau Tendre EDP Chanel -->
+            <div class="perfume-item">
+                <div class="column-name">
+                    <h3>Chance Eau Tendre EDP Chanel 100ml</h3>
+                    <div class="price-container">
+                        <span class="original-price"></span>
+                        <span class="sale-price">Price TBA</span>
+                    </div>
+                </div>
+                <div class="column-picture">
+                    <img src="chance_edp_chanel.jpg" alt="Chance Eau Tendre EDP Chanel for women - 100ml">
+                </div>
+                <div class="column-description">
+                    <p>The Eau de Parfum version intensifies the tender scent with a **deeper, creamier heart**. A captivating fragrance trail that is more enduring and enveloping.</p>
+                    <strong>Notes:</strong>
+                    <p>The **Jasmine** heart is more pronounced, offering a full, rich floral signature over a warm Musk and White Cedar base.</p>
+                    </div>
+            </div>
+
+            <!-- Existing Products (Retained) -->
             <div class="perfume-item">
                 <div class="column-name">
                     <h3>Good Girl Carolina Herrera 80ml</h3>
-                    <span class="price">PHP 8,000.00</span>
+                    <div class="price-container">
+                        <span class="original-price">PHP 9,000.00</span> 
+                        <span class="sale-price">PHP 8,000.00</span>
+                    </div>
                 </div>
                 <div class="column-picture">
                     <img src="good_girl.jpg" alt="Good Girl Carolina Herrera Perfume Bottle">
@@ -511,15 +849,18 @@
                     <p>An elegant **Floral Oriental** scent embodying the duality of a woman: her innocence and her confident, seductive nature. Luxurious blend of almond, coffee, and rich floral notes.</p>
                     <strong>Notes:</strong>
                     <p><strong>Top:</strong> Almond, Coffee, Bergamot, Lemon.<br>
-                       <strong>Heart:</strong> Jasmine Sambac, Tuberose, Rose.<br>
-                       <strong>Base:</strong> Tonka Bean, Cocoa, Vanilla, Sandalwood, Musk.</p>
+                        <strong>Heart:</strong> Jasmine Sambac, Tuberose, Rose.<br>
+                        <strong>Base:</strong> Tonka Bean, Cocoa, Vanilla, Sandalwood, Musk.</p>
                     </div>
             </div>
 
             <div class="perfume-item">
                 <div class="column-name">
                     <h3>Eclat d’Arpège Lanvin 100ml</h3>
-                    <span class="price">PHP 4,600.00</span>
+                    <div class="price-container">
+                        <span class="original-price">PHP 5,175.00</span> 
+                        <span class="sale-price">PHP 4,600.00</span>
+                    </div>
                 </div>
                 <div class="column-picture">
                     <img src="eclat_d_arpege.jpg" alt="Eclat d’Arpège Lanvin Perfume Bottle">
@@ -528,15 +869,18 @@
                     <p>A delicate and elegant scent, capturing the essence of **springtime in a bottle**. A light and feminine blend of citrus, floral, and woody accords, perfect for daytime wear.</p>
                     <strong>Notes:</strong>
                     <p><strong>Top:</strong> Lemon Leaves, Green Lilac.<br>
-                       <strong>Heart:</strong> Wisteria Blossom, Green Tea Leaves, Peach Blossom.<br>
-                       <strong>Base:</strong> White Cedar, Soft Musk.</p>
+                        <strong>Heart:</strong> Wisteria Blossom, Green Tea Leaves, Peach Blossom.<br>
+                        <strong>Base:</strong> White Cedar, Soft Musk.</p>
                     </div>
             </div>
 
             <div class="perfume-item">
                 <div class="column-name">
                     <h3>Versace Bright Crystal 90ml</h3>
-                    <span class="price">PHP 5,000.00</span>
+                    <div class="price-container">
+                        <span class="original-price">PHP 5,625.00</span> 
+                        <span class="sale-price">PHP 5,000.00</span>
+                    </div>
                 </div>
                 <div class="column-picture">
                     <img src="versace_bright_crystal.jpg" alt="Versace Bright Crystal Perfume Bottle">
@@ -545,15 +889,18 @@
                     <p>A sensual and feminine fragrance symbolizing a confident and charming woman. It's a delightful fusion of **floral, fruity, and musky notes**.</p>
                     <strong>Notes:</strong>
                     <p><strong>Top:</strong> Yuzu, Iced Accord, Pomegranate.<br>
-                       <strong>Heart:</strong> Peony, Magnolia, Lotus Flower.<br>
-                       <strong>Base:</strong> Acajou (Mahogany), Amber, Musk.</p>
+                        <strong>Heart:</strong> Peony, Magnolia, Lotus Flower.<br>
+                        <strong>Base:</strong> Acajou (Mahogany), Amber, Musk.</p>
                     </div>
             </div>
 
             <div class="perfume-item">
                 <div class="column-name">
                     <h3>Light Blue Dolce&Gabbana 100ml</h3>
-                    <span class="price">PHP 4,800.00</span>
+                    <div class="price-container">
+                        <span class="original-price">PHP 5,400.00</span> 
+                        <span class="sale-price">PHP 4,800.00</span>
+                    </div>
                 </div>
                 <div class="column-picture">
                     <img src="light_blue.jpg" alt="Light Blue Dolce&Gabbana Perfume Bottle">
@@ -562,10 +909,12 @@
                     <p>A distinctive and invigorating **Floral-Fruit** fragrance. It adds an irresistible radiance, evoking the spirit of a summer holiday on the Mediterranean.</p>
                     <strong>Notes:</strong>
                     <p><strong>Top:</strong> Apple, Sicilian Cedar, Bellflower.<br>
-                       <strong>Heart:</strong> Jasmine, White Rose, Bamboo.<br>
-                       <strong>Base:</strong> Cedar, Amber, Musk.</p>
+                        <strong>Heart:</strong> Jasmine, White Rose, Bamboo.<br>
+                        <strong>Base:</strong> Cedar, Amber, Musk.</p>
                     </div>
             </div>
 
-        </div> </div> </body>
+        </div> 
+    </div>
+</body>
 </html>
