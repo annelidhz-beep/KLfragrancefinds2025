@@ -8,6 +8,49 @@
 <link href="https://docs.google.com/forms/d/e/1FAIpQLSf2fKV547yQRtAW2umQEUOAnL3GcMhkFZ0mikoexr2MXMmGGw/viewform"/>
 
 <style>
+/* SECTION TITLE STYLING */
+.collection-title {
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 2.2em;
+    position: relative;
+}
+
+/* MEN STYLE */
+.collection-men {
+    background: linear-gradient(90deg, #0077b6, #00b4d8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* WOMEN STYLE */
+.collection-women {
+    background: linear-gradient(90deg, #ff4d6d, #ff8fa3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* DIVIDER LINE UNDER TITLE */
+.collection-title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    margin: 10px auto 25px;
+    border-radius: 2px;
+}
+
+/* MEN LINE COLOR */
+.collection-men::after {
+    background: linear-gradient(90deg, #0077b6, #00b4d8);
+}
+
+/* WOMEN LINE COLOR */
+.collection-women::after {
+    background: linear-gradient(90deg, #ff4d6d, #ff8fa3);
+}
+
     body {
         font-family: 'Lato', sans-serif;
         margin: 0;
@@ -156,7 +199,7 @@
 <header>
     <h1><i>KL FRAGRANCE FINDS</i></h1>
     <p>Your destination for authentic, high-quality luxury fragrances.</p>
-    <p>PASABUY FROM DUBAI. ETA - MAY 2026</p>
+   <p class="blink">✈️ PASABUY FROM DUBAI • ETA MAY 2026</p>
     <nav>
         <a class="nav-link nav-link-men" href="#men-collection">MEN</a>
         <a class="nav-link nav-link-women" href="#women-collection">WOMEN</a>
@@ -168,17 +211,19 @@
 
 <div class="container">
 
-  
+ 
     <!-- MEN'S COLLECTION -->
-    <h2 class="collection-title" id="men-collection">Men's Collection</h2>
+   <h2 class="collection-title collection-men" id="men-collection">
+     Men's Collection
+</h2>
     <div class="perfume-list">
 
-        <!-- Gentleman EDP Givenchy (Complete) -->
+        <!-- Gentleman EDP Givenchy for Men 100ml -->
         <div class="perfume-item">
             <div class="column-name">
-                <h3>Gentleman EDP Givenchy (Complete) 100ml</h3>
+                <h3>Gentleman EDP Givenchy for Men 100ml</h3>
                 <div class="price-container">
-                    <span class="original-price">PHP 6,863.00</span> 
+                    <span class="original-price">PHP 8,350.00</span>
                     <span class="sale-price">PHP 6,100.00</span>
                 </div>
             </div>
@@ -194,24 +239,6 @@
             </div>
         </div>
 
-        <!-- Add other men's perfumes here --> <div class="perfume-item">
-                <div class="column-name">
-                    <h3>Gentleman EDP Givenchy (Tester) 100ml</h3>
-                    <div class="price-container">
-                        <span class="original-price">PHP 6,188.00</span> <span class="sale-price">PHP 5,500.00</span>
-                    </div>
-                </div>
-                <div class="column-picture">
-                     <img src="gentleman_givenchy_edp_tester.jpg">
-                </div>
-                <div class="column-description">
-                    <p>The same distinguished aroma as the boxed version, available at a special **tester price**. Perfect for personal use.</p>
-                    <strong>Notes:</strong>
-                    <p><strong>Top:</strong> Black Pepper, Lavender, Bergamot.<br>
-                        <strong>Heart:</strong> Orris, Cinnamon, Clove.<br>
-                        <strong>Base:</strong> Black Vanilla Husk, Tolu Balsam, Patchouli, Benzoin.</p>
-                    </div>
-            </div>
 
             <div class="perfume-item">
                 <div class="column-name">
@@ -258,7 +285,7 @@
                 <div class="column-name">
                     <h3>Creed Aventus EDP 100ml</h3>
                     <div class="price-container">
-                        <span class="original-price">PHP 23,000 </span> <span class="sale-price">PHP 19,000.00</span>
+                        <span class="original-price">PHP 23,000.00 </span> <span class="sale-price">PHP 19,000.00</span>
                     </div>
                 </div>
                 <div class="column-picture">
@@ -277,7 +304,7 @@
                 <div class="column-name">
                     <h3>Bleu de Chanel EDP 100ml</h3>
                     <div class="price-container">
-                        <span class="original-price">PHP 11,813.00</span> <span class="sale-price">PHP 10,500.00</span>
+                        <span class="original-price">PHP 13,000.00</span> <span class="sale-price">PHP 10,500.00</span>
                     </div>
                 </div>
                 <div class="column-picture">
@@ -296,7 +323,7 @@
                 <div class="column-name">
                     <h3>Bleu de Chanel EDT 100ml</h3>
                     <div class="price-container">
-                        <span class="original-price">PHP 9,563.00</span> <span class="sale-price">PHP 8,500.00</span>
+                        <span class="original-price">PHP 10,000.00</span> <span class="sale-price">PHP 8,500.00</span>
                     </div>
                 </div>
                 <div class="column-picture">
@@ -313,7 +340,7 @@
                 <div class="column-name">
                     <h3>Terre d'Hermès EDT 100ml</h3>
                     <div class="price-container">
-                        <span class="original-price">PHP 7,875.00</span> <span class="sale-price">PHP 7,000.00</span>
+                        <span class="original-price">PHP 9,100.00</span> <span class="sale-price">PHP 7,000.00</span>
                     </div>
                 </div>
                 <div class="column-picture">
@@ -332,7 +359,7 @@
                 <div class="column-name">
                     <h3>Stronger With You Intensely 100ml</h3>
                     <div class="price-container">
-                        <span class="original-price">PHP 8,438.00</span> <span class="sale-price">PHP 7,500.00</span>
+                        <span class="original-price">PHP 10,000.00</span> <span class="sale-price">PHP 7,500.00</span>
                     </div>
                 </div>
                 <div class="column-picture">
@@ -351,7 +378,7 @@
                 <div class="column-name">
                     <h3>Acqua Di Gio EDT 100ml</h3>
                     <div class="price-container">
-                        <span class="original-price">PHP 6,750.00</span> <span class="sale-price">PHP 6,000.00</span>
+                        <span class="original-price">PHP 8,000.00</span> <span class="sale-price">PHP 6,000.00</span>
                     </div>
                 </div>
                 <div class="column-picture">
@@ -370,7 +397,7 @@
                 <div class="column-name">
                     <h3>The One for Men EDP 100ml</h3>
                     <div class="price-container">
-                        <span class="original-price">PHP 8,000</span> <span class="sale-price">PHP 6,000.00</span>
+                        <span class="original-price">PHP 8,000.00</span> <span class="sale-price">PHP 6,000.00</span>
                     </div>
                 </div>
                 <div class="column-picture">
@@ -389,7 +416,7 @@
                 <div class="column-name">
                     <h3>Explorer Montblanc EDP 100ml</h3>
                     <div class="price-container">
-                        <span class="original-price">PHP 5,625.00</span> <span class="sale-price">PHP 5,000.00</span>
+                        <span class="original-price">PHP 7,050.00</span> <span class="sale-price">PHP 5,000.00</span>
                     </div>
                 </div>
                 <div class="column-picture">
@@ -408,7 +435,7 @@
                 <div class="column-name">
                     <h3>Dior Homme Intense 100ml</h3>
                     <div class="price-container">
-                        <span class="original-price">PHP 10,013.00</span> <span class="sale-price">PHP 8,900.00</span>
+                        <span class="original-price">PHP 15,000.00</span> <span class="sale-price">PHP 8,900.00</span>
                     </div>
                 </div>
                 <div class="column-picture">
@@ -427,7 +454,7 @@
                 <div class="column-name">
                     <h3>Luna Rossa Black Prada 100ml</h3>
                     <div class="price-container">
-                        <span class="original-price">PHP 7,313.00</span> <span class="sale-price">PHP 6,500.00</span>
+                        <span class="original-price">PHP 8,500.00</span> <span class="sale-price">PHP 6,500.00</span>
                     </div>
                 </div>
                 <div class="column-picture">
@@ -446,7 +473,7 @@
                 <div class="column-name">
                     <h3>Azzaro The Most Wanted 100ml</h3>
                     <div class="price-container">
-                        <span class="original-price">PHP 5,625.00</span> <span class="sale-price">PHP 5,000.00</span>
+                        <span class="original-price">PHP 7,300.00</span> <span class="sale-price">PHP 5,000.00</span>
                     </div>
                 </div>
                 <div class="column-picture">
@@ -465,7 +492,7 @@
                 <div class="column-name">
                     <h3>Prada L'Homme 100ml</h3>
                     <div class="price-container">
-                        <span class="original-price">PHP 6,750.00</span> <span class="sale-price">PHP 6,000.00</span>
+                        <span class="original-price">PHP 7,700.00</span> <span class="sale-price">PHP 6,000.00</span>
                     </div>
                 </div>
                 <div class="column-picture">
@@ -484,7 +511,7 @@
                 <div class="column-name">
                     <h3>Versace Pour Homme EDT 100ml</h3>
                     <div class="price-container">
-                        <span class="original-price">PHP 4,950.00</span> <span class="sale-price">PHP 4,400.00</span>
+                        <span class="original-price">PHP 6,400.00</span> <span class="sale-price">PHP 4,400.00</span>
                     </div>
                 </div>
                 <div class="column-picture">
@@ -503,7 +530,7 @@
                 <div class="column-name">
                     <h3>Y EDP YSL 100ml</h3>
                     <div class="price-container">
-                        <span class="original-price">PHP 7,313.00</span> <span class="sale-price">PHP 6,500.00</span>
+                        <span class="original-price">PHP 7,900.00</span> <span class="sale-price">PHP 6,500.00</span>
                     </div>
                 </div>
                 <div class="column-picture">
@@ -522,7 +549,7 @@
                 <div class="column-name">
                     <h3>Versace Eros EDP 100ml</h3>
                     <div class="price-container">
-                        <span class="original-price">PHP 5,400.00</span> <span class="sale-price">PHP 4,800.00</span>
+                        <span class="original-price">PHP 7,000.00</span> <span class="sale-price">PHP 4,800.00</span>
                     </div>
                 </div>
                 <div class="column-picture">
@@ -541,7 +568,7 @@
                 <div class="column-name">
                     <h3>Versace Eros EDT 100ml</h3>
                     <div class="price-container">
-                        <span class="original-price">PHP 4,725.00</span> <span class="sale-price">PHP 4,200.00</span>
+                        <span class="original-price">PHP 6,400.00</span> <span class="sale-price">PHP 4,200.00</span>
                     </div>
                 </div>
                 <div class="column-picture">
@@ -558,7 +585,7 @@
                 <div class="column-name">
                     <h3>Dior Sauvage EDP 100ml</h3>
                     <div class="price-container">
-                        <span class="original-price">PHP 9,225.00</span> <span class="sale-price">PHP 8,200.00</span>
+                        <span class="original-price">PHP 9,500.00</span> <span class="sale-price">PHP 8,200.00</span>
                     </div>
                 </div>
                 <div class="column-picture">
@@ -577,7 +604,7 @@
                 <div class="column-name">
                     <h3>Dior Sauvage EDT 100ml</h3>
                     <div class="price-container">
-                        <span class="original-price">PHP 7,650.00</span> <span class="sale-price">PHP 6,800.00</span>
+                        <span class="original-price">PHP 8,000.00</span> <span class="sale-price">PHP 6,800.00</span>
                     </div>
                 </div>
                 <div class="column-picture">
@@ -594,7 +621,7 @@
                 <div class="column-name">
                     <h3>Lacoste L.12.12. White 100ml</h3>
                     <div class="price-container">
-                        <span class="original-price">PHP 4,500.00</span> <span class="sale-price">PHP 4,000.00</span>
+                        <span class="original-price">PHP 5,950.00</span> <span class="sale-price">PHP 4,000.00</span>
                     </div>
                 </div>
                 <div class="column-picture">
@@ -608,34 +635,18 @@
                         <strong>Base:</strong> Virginia Cedar, Suede, Vetiver, Leather.</p>
                     </div>
             </div>
-            
-
-<div class="perfume-item">
-    <div class="column-name">
-        <h3>Tom Ford - FABULOUS (Unisex)</h3>
-        <div class="price-container">
-            <span class="original-price">PHP 22,600</span> 
-            <span class="sale-price">PHP 22,000</span>
-        </div>
-    </div>
-    <div class="column-picture">
-        <img src="tomford_fabulous_unisex.jpg">
-    </div>
-    <div class="column-description">
-        <p>Fabulous by Tom Ford is a Leather fragrance for women and men. Top notes are Lavender and Clary Sage; middle notes are Leather, Bitter Almond, Vanilla and Orris; base notes are Leather, Tonka Bean, Cashmeran, White Woods and Amber.</p>
-    </div>
-</div>
+           
 
 <div class="perfume-item">
     <div class="column-name">
         <h3> Nishane Hacivat Unisex EDP 100ml  </h3>
         <div class="price-container">
-            <span class="original-price">PHP 13,000</span> 
-            <span class="sale-price">PHP 10,200</span>
+            <span class="original-price">PHP 13,000.00</span>
+            <span class="sale-price">PHP 10,200.00</span>
         </div>
     </div>
     <div class="column-picture">
-        <img src="nishane_edp.jpg">
+        <img src="nishane_edp.png">
     </div>
     <div class="column-description">
         <p>Hacivat by Nishane is a Chypre fragrance for women and men. Hacivat was launched in 2017. The nose behind this fragrance is Jorge Lee. Top notes are Pineapple, Grapefruit and Bergamot; middle notes are Cedar, Patchouli and Jasmine; base notes are Oakmoss and Woody Notes..</p>
@@ -645,7 +656,9 @@
 </div>
 
     <!-- WOMEN'S COLLECTION -->
-    <h2 class="collection-title" id="women-collection">Women's Collection</h2>
+    <h2 class="collection-title collection-women" id="women-collection">
+    Women's Collection
+</h2>
     <div class="perfume-list">
 
         <!-- Example Women's Perfume -->
@@ -653,8 +666,8 @@
             <div class="column-name">
                 <h3>Bvlgari Omnia Crystalline EDP 65ml</h3>
                 <div class="price-container">
-                    <span class="original-price">PHP 788.00</span> 
-                    <span class="sale-price">PHP 700.00</span>
+                    <span class="original-price">PHP 10,000.00</span>
+                    <span class="sale-price">PHP 7,000.00</span>
                 </div>
             </div>
             <div class="column-picture">
@@ -674,7 +687,7 @@
                 <div class="column-name">
                     <h3>Miss Dior EDP (2021) 100ml</h3>
                     <div class="price-container">
-                        <span class="original-price"></span>
+                        <span class="original-price">PHP 12,350.00</span>
                         <span class="sale-price"> Php 10,350 </span>
                     </div>
                 </div>
@@ -735,7 +748,7 @@
                 <div class="column-name">
                     <h3>Good Girl Carolina Herrera 80ml</h3>
                     <div class="price-container">
-                        <span class="original-price">PHP 9,000.00</span> <span class="sale-price">PHP 8,000.00</span>
+                        <span class="original-price">PHP 10,400.00</span> <span class="sale-price">PHP 8,000.00</span>
                     </div>
                 </div>
                 <div class="column-picture">
@@ -754,7 +767,7 @@
                 <div class="column-name">
                     <h3>Eclat d’Arpège Lanvin 100ml</h3>
                     <div class="price-container">
-                        <span class="original-price">PHP 5,175.00</span> <span class="sale-price">PHP 4,600.00</span>
+                        <span class="original-price">PHP 6,600.00</span> <span class="sale-price">PHP 4,600.00</span>
                     </div>
                 </div>
                 <div class="column-picture">
@@ -773,7 +786,7 @@
                 <div class="column-name">
                     <h3>Versace Bright Crystal 90ml</h3>
                     <div class="price-container">
-                        <span class="original-price">PHP 5,625.00</span> <span class="sale-price">PHP 5,000.00</span>
+                        <span class="original-price">PHP 7,000.00</span> <span class="sale-price">PHP 5,000.00</span>
                     </div>
                 </div>
                 <div class="column-picture">
@@ -792,7 +805,7 @@
                 <div class="column-name">
                     <h3>Light Blue Dolce&Gabbana 100ml</h3>
                     <div class="price-container">
-                        <span class="original-price">PHP 5,400.00</span> <span class="sale-price">PHP 4,800.00</span>
+                        <span class="original-price">PHP 6,800.00</span> <span class="sale-price">PHP 4,800.00</span>
                     </div>
                 </div>
                 <div class="column-picture">
@@ -807,18 +820,18 @@
                     </div>
             </div>
  
-	<div class="perfume-item">
+<div class="perfume-item">
                 <div class="column-name">
                     <h3>YSL Libre </h3>
                     <div class="price-container">
-                        <span class="original-price">PHP 11,350</span> <span class="sale-price"> PHP 8,500</span>
+                        <span class="original-price">PHP 11,350.00</span> <span class="sale-price"> PHP 8,500.00</span>
                     </div>
                 </div>
                 <div class="column-picture">
                     <img src="ysl_libre.jpg">
                 </div>
                 <div class="column-description">
-                    <p> Libre by Yves Saint Laurent is a Oriental Fougere fragrance for women. Libre was launched in 2019. Libre was created by Anne Flipo and Carlos Benaïm. Top notes are Lavender, Mandarin Orange, Black Currant and Petitgrain; middle notes are Lavender, Orange Blossom and Jasmine; base notes are Madagascar Vanilla, Musk, Cedar and Ambergris. </p> 
+                    <p> Libre by Yves Saint Laurent is a Oriental Fougere fragrance for women. Libre was launched in 2019. Libre was created by Anne Flipo and Carlos Benaïm. Top notes are Lavender, Mandarin Orange, Black Currant and Petitgrain; middle notes are Lavender, Orange Blossom and Jasmine; base notes are Madagascar Vanilla, Musk, Cedar and Ambergris. </p>
 </div>
 </div>
 
@@ -826,14 +839,14 @@
                 <div class="column-name">
                     <h3>Prada Paradoxe Intense 100ml </h3>
                     <div class="price-container">
-                        <span class="original-price">PHP 11,800</span> <span class="sale-price"> PHP 9,800 </span>
+                        <span class="original-price">PHP 11,800.00</span> <span class="sale-price"> PHP 9,800.00 </span>
                     </div>
                 </div>
                 <div class="column-picture">
                     <img src="prada_paradoxe_intense.jpg">
                 </div>
                 <div class="column-description">
-                    <p> Prada Paradoxe Intense by Prada is a Oriental Floral fragrance for women. Prada Paradoxe Intense was launched in 2023. Prada Paradoxe Intense was created by Nadège Le Garlantezec, Shyamala Maisondieu and Antoine Maisondieu. Top notes are Pear, Neroli and Bergamot; middle notes are Jasmine, Neroli Essence and Moss; base notes are Bourbon Vanilla, Vanilla, Amber, Ambrofix™ and Serenolide. </p> 
+                    <p> Prada Paradoxe Intense by Prada is a Oriental Floral fragrance for women. Prada Paradoxe Intense was launched in 2023. Prada Paradoxe Intense was created by Nadège Le Garlantezec, Shyamala Maisondieu and Antoine Maisondieu. Top notes are Pear, Neroli and Bergamot; middle notes are Jasmine, Neroli Essence and Moss; base notes are Bourbon Vanilla, Vanilla, Amber, Ambrofix™ and Serenolide. </p>
 </div>
 </div>
 
@@ -841,14 +854,14 @@
                 <div class="column-name">
                     <h3>Prada Paradoxe Intense 100ml </h3>
                     <div class="price-container">
-                        <span class="original-price">PHP 7,945</span> <span class="sale-price"> PHP6,500 </span>
+                        <span class="original-price">PHP 7,945.00</span> <span class="sale-price"> PHP6,500.00 </span>
                     </div>
                 </div>
                 <div class="column-picture">
                     <img src="prada_paradoxe_edp.jpg">
                 </div>
                 <div class="column-description">
-                    <p> Prada Paradoxe by Prada is a Oriental Floral fragrance for women. Prada Paradoxe was launched in 2022. Prada Paradoxe was created by Nadège Le Garlantezec, Antoine Maisondieu and Shyamala Maisondieu. Top notes are Pear, Tangerine and Bergamot; middle notes are Orange Blossom, Neroli Essence, Neroli and Jasmine Sambac; base notes are Bourbon Vanilla, Amber, White Musk and Benzoin. </p> 
+                    <p> Prada Paradoxe by Prada is a Oriental Floral fragrance for women. Prada Paradoxe was launched in 2022. Prada Paradoxe was created by Nadège Le Garlantezec, Antoine Maisondieu and Shyamala Maisondieu. Top notes are Pear, Tangerine and Bergamot; middle notes are Orange Blossom, Neroli Essence, Neroli and Jasmine Sambac; base notes are Bourbon Vanilla, Amber, White Musk and Benzoin. </p>
 </div>
 </div>
 
