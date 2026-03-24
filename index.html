@@ -42,6 +42,195 @@ header {
     font-weight: bold;
 }
 
+/* NAV */
+.nav-link {
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 15px;
+}
+.nav-link-men { color: #0077b6; }
+.nav-link-women { color: #ff4d6d; }
+
+/* BUTTON */
+#order-link {
+    background: linear-gradient(135deg, #00b4d8, #48cae4);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+/* GRID */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.collection-title {
+    font-family: 'Playfair Display';
+    text-align: center;
+}
+
+.men-accent { color: #0077b6; }
+.women-accent { color: #ff4d6d; }
+
+.perfume-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+        
+        /* Removed old men/women-title colors as a sophisticated look uses less color variation */
+
+        /* Perfume Grid/Table Styling */
+        .perfume-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        /* Styling for each perfume item */
+        .perfume-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            /* More pronounced, luxury shadow */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            border: 1px solid #eee;
+        }
+
+        .perfume-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .perfume-item h3 {
+            font-family: 'Playfair Display', serif;
+            color: #1a1a1a;
+            font-size: 1.4em;
+            margin-top: 0;
+            min-height: 40px;
+            font-weight: 700;
+        }
+
+        /* Price Styling (Order: Original Price, then Sale Price) */
+        .price-container {
+            margin-bottom: 15px;
+            font-size: 1.2em;
+            display: block;
+            min-height: 20px;
+        }
+        
+        /* NEW STYLING FOR STRIKETHROUGH PRICE (Original Price) */
+        .original-price {
+            color: #888;
+            text-decoration: line-through;
+            font-size: 0.85em;
+            margin-right: 10px;
+            font-weight: 400;
+        }
+
+        /* NEW STYLING FOR SALE PRICE (New Price) */
+        .sale-price {
+            color: #cc0000; /* Bold Red for "CHEAPER" feel */
+            font-size: 1.3em;
+            font-weight: 700;
+            display: inline-block;
+        }
+
+        /* Image Placeholder Styling */
+        .column-picture {
+            order: 2;
+            margin: 15px 0;
+            background-color: #f0f0f0;
+            min-height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #888;
+            font-size: 0.9em;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .column-picture img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            max-height: 250px;
+            object-fit: contain;
+        }
+        
+        .image-placeholder {
+            padding: 20px;
+            font-style: italic;
+        }
+
+
+        /* Column 3: Description and Notes */
+        .column-description {
+            order: 3;
+            text-align: left;
+            font-size: 0.9em;
+            flex-grow: 1;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .column-description strong {
+            display: block;
+            margin-top: 10px;
+            color: #c0a969; /* Gold Accent for 'Notes' header */
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+        
+        .column-description p {
+            margin: 5px 0;
+        }
+
+
+        /* Responsive Design: Stacks columns on smaller screens */
+        @media (max-width: 768px) {
+            .perfume-list {
+                grid-template-columns: 1fr;
+            }
+
+            .collection-title {
+                font-size: 2em;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1> <i> KL FRAGRANCE FINDS </i> </h1>
+        <p>Your destination for authentic, high-quality luxury fragrances.</p>
+        <p>PASABUY FROM DUBAI. ETA - MAY 2026</p>
+<nav>
+<a class="nav-link nav-link-men" href="#men-collection">MEN</a>
+<a class="nav-link nav-link-women" href="#women-collection">WOMEN</a>
+</nav>
+
+<br>
+<a href="https://docs.google.com/forms/d/19kxAvg1pwCq5xoIT28n8PM_yqy74KuYi2BHVT5Ejz7w" id="order-link" target="_blank">ORDER NOW</a>
+</header>
+    </header>
+<div class="sale-banner">
+
+☀️ SUMMER SALE • LIMITED STOCK ☀️
+</div>
+
+}
+
         }
         
         /* Navigation Links Styling (New) */
