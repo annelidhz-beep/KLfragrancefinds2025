@@ -7,254 +7,194 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet"/>
 
-    <style>
-       /* 🌴 SUMMER LUXURY THEME */
-body {
-    font-family: 'Lato', sans-serif;
-    margin: 0;
-    background: linear-gradient(to bottom, #fff7ed, #ffe4d6);
-    color: #333;
-}
+<style>
+    body {
+        font-family: 'Lato', sans-serif;
+        margin: 0;
+        background: linear-gradient(to bottom, #fff7ed, #ffe4d6);
+        color: #333;
+        scroll-behavior: smooth;
+    }
 
-/* HEADER */
-header {
-    background: linear-gradient(135deg, #ff7f50, #ffb347);
-    color: white;
-    padding: 30px 0;
-    text-align: center;
-    border-radius: 0 0 25px 25px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-}
+    header {
+        background: linear-gradient(135deg, #ff7f50, #ffb347);
+        color: white;
+        padding: 30px 0;
+        text-align: center;
+        border-radius: 0 0 25px 25px;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    }
 
+    header h1 {
+        font-family: 'Playfair Display', serif;
+        font-size: 3em;
+        letter-spacing: 4px;
+        margin: 0;
+    }
 
-       header h1 {
-    font-family: 'Playfair Display';
-    font-size: 3em;
-    letter-spacing: 4px;
-}
+    nav {
+        margin-top: 10px;
+    }
 
-/* SALE BANNER */
-.sale-banner {
-    text-align: center;
-    background: linear-gradient(90deg, #ff7f50, #ffb347);
-    color: white;
-    padding: 10px;
-    font-weight: bold;
-}
+    .nav-link {
+        text-decoration: none;
+        font-weight: bold;
+        padding: 5px 15px;
+        transition: color 0.3s;
+    }
 
-/* NAV */
-.nav-link {
-    text-decoration: none;
-    font-weight: bold;
-    padding: 5px 15px;
-}
-.nav-link-men { color: #0077b6; }
-.nav-link-women { color: #ff4d6d; }
+    .nav-link-men { color: #0077b6; }
+    .nav-link-men:hover { color: #005f87; }
+    .nav-link-women { color: #ff4d6d; }
+    .nav-link-women:hover { color: #b33a53; }
 
-/* BUTTON */
-#order-link {
-    background: linear-gradient(135deg, #00b4d8, #48cae4);
-    color: white;
-    padding: 10px 20px;
-    border-radius: 20px;
-    text-decoration: none;
-}
+    #order-link {
+        display: inline-block;
+        margin-top: 15px;
+        background: linear-gradient(135deg, #00b4d8, #48cae4);
+        color: white;
+        padding: 10px 20px;
+        border-radius: 20px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: transform 0.3s;
+    }
 
-/* GRID */
-.container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 20px;
-}
+    #order-link:hover { transform: scale(1.05); }
 
-.collection-title {
-    font-family: 'Playfair Display';
-    text-align: center;
-}
+    .sale-banner, .bestseller-banner {
+        text-align: center;
+        color: white;
+        padding: 10px;
+        font-weight: bold;
+        margin-top: 15px;
+        border-radius: 5px;
+    }
 
-.men-accent { color: #0077b6; }
-.women-accent { color: #ff4d6d; }
+    .sale-banner { background: linear-gradient(90deg, #ff7f50, #ffb347); }
+    .bestseller-banner { background: linear-gradient(90deg, #f5a623, #ffcc00); margin-bottom: 20px; }
 
-.perfume-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-}
-        
-        /* Removed old men/women-title colors as a sophisticated look uses less color variation */
+    .container { max-width: 1200px; margin: auto; padding: 20px; }
+    .collection-title { font-family: 'Playfair Display', serif; text-align: center; margin-bottom: 20px; }
 
-        /* Perfume Grid/Table Styling */
-        .perfume-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            margin-bottom: 50px;
-        }
+    .perfume-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+        margin-bottom: 50px;
+    }
 
-        /* Styling for each perfume item */
-        .perfume-item {
-            background-color: #ffffff;
-            padding: 25px;
-            border-radius: 10px;
-            /* More pronounced, luxury shadow */
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-            display: flex;
-            flex-direction: column;
-            text-align: center;
-            border: 1px solid #eee;
-        }
+    .perfume-item {
+        background-color: #ffffff;
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        border: 1px solid #eee;
+    }
 
-        .perfume-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-        }
+    .perfume-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    }
 
-        .perfume-item h3 {
-            font-family: 'Playfair Display', serif;
-            color: #1a1a1a;
-            font-size: 1.4em;
-            margin-top: 0;
-            min-height: 40px;
-            font-weight: 700;
-        }
+    .perfume-item h3 {
+        font-family: 'Playfair Display', serif;
+        color: #1a1a1a;
+        font-size: 1.4em;
+        margin-top: 0;
+        min-height: 40px;
+        font-weight: 700;
+    }
 
-        /* Price Styling (Order: Original Price, then Sale Price) */
-        .price-container {
-            margin-bottom: 15px;
-            font-size: 1.2em;
-            display: block;
-            min-height: 20px;
-        }
-        
-        /* NEW STYLING FOR STRIKETHROUGH PRICE (Original Price) */
-        .original-price {
-            color: #888;
-            text-decoration: line-through;
-            font-size: 0.85em;
-            margin-right: 10px;
-            font-weight: 400;
-        }
+    .price-container {
+        margin-bottom: 15px;
+        font-size: 1.2em;
+        display: block;
+        min-height: 20px;
+    }
 
-        /* NEW STYLING FOR SALE PRICE (New Price) */
-        .sale-price {
-            color: #cc0000; /* Bold Red for "CHEAPER" feel */
-            font-size: 1.3em;
-            font-weight: 700;
-            display: inline-block;
-        }
+    .original-price { color: #888; text-decoration: line-through; font-size: 0.85em; margin-right: 10px; font-weight: 400; }
+    .sale-price { color: #cc0000; font-size: 1.3em; font-weight: 700; display: inline-block; }
 
-        /* Image Placeholder Styling */
-        .column-picture {
-            order: 2;
-            margin: 15px 0;
-            background-color: #f0f0f0;
-            min-height: 250px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #888;
-            font-size: 0.9em;
-            border-radius: 6px;
-            overflow: hidden;
-        }
+    .column-picture {
+        order: 2;
+        margin: 15px 0;
+        border-radius: 6px;
+        overflow: hidden;
+        background-color: #f0f0f0;
+        min-height: 250px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
-        .column-picture img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 4px;
-            max-height: 250px;
-            object-fit: contain;
-        }
-        
-        .image-placeholder {
-            padding: 20px;
-            font-style: italic;
-        }
+    .column-picture img { max-width: 100%; height: auto; border-radius: 4px; max-height: 250px; object-fit: contain; }
 
+    .column-description {
+        order: 3;
+        text-align: left;
+        font-size: 0.9em;
+        flex-grow: 1;
+        margin-bottom: 15px;
+        line-height: 1.6;
+    }
 
-        /* Column 3: Description and Notes */
-        .column-description {
-            order: 3;
-            text-align: left;
-            font-size: 0.9em;
-            flex-grow: 1;
-            margin-bottom: 15px;
-            line-height: 1.6;
-        }
+    .column-description strong { display: block; margin-top: 10px; color: #c0a969; font-family: 'Playfair Display', serif; font-weight: 700; }
 
-        .column-description strong {
-            display: block;
-            margin-top: 10px;
-            color: #c0a969; /* Gold Accent for 'Notes' header */
-            font-family: 'Playfair Display', serif;
-            font-weight: 700;
-        }
-        
-        .column-description p {
-            margin: 5px 0;
-        }
-
-
-        /* Responsive Design: Stacks columns on smaller screens */
-        @media (max-width: 768px) {
-            .perfume-list {
-                grid-template-columns: 1fr;
-            }
-
-            .collection-title {
-                font-size: 2em;
-            }
-        }
-
-    </style>
+    @media (max-width: 768px) {
+        .perfume-list { grid-template-columns: 1fr; }
+        .collection-title { font-size: 2em; }
+    }
+</style>
 </head>
 <body>
 
-    <header>
-        <h1> <i> KL FRAGRANCE FINDS </i> </h1>
-        <p>Your destination for authentic, high-quality luxury fragrances.</p>
-        <p>PASABUY FROM DUBAI. ETA - MAY 2026</p>
-<nav>
-<a class="nav-link nav-link-men" href="#men-collection">MEN</a>
-<a class="nav-link nav-link-women" href="#women-collection">WOMEN</a>
-</nav>
-
-<br>
-<a href="https://docs.google.com/forms/d/19kxAvg1pwCq5xoIT28n8PM_yqy74KuYi2BHVT5Ejz7w" id="order-link" target="_blank">ORDER NOW</a>
+<header>
+    <h1><i>KL FRAGRANCE FINDS</i></h1>
+    <p>Your destination for authentic, high-quality luxury fragrances.</p>
+    <p>PASABUY FROM DUBAI. ETA - MAY 2026</p>
+    <nav>
+        <a class="nav-link nav-link-men" href="#men-collection">MEN</a>
+        <a class="nav-link nav-link-women" href="#women-collection">WOMEN</a>
+    </nav>
+    <a href="https://docs.google.com/forms/d/19kxAvg1pwCq5xoIT28n8PM_yqy74KuYi2BHVT5Ejz7w" id="order-link" target="_blank">ORDER NOW</a>
 </header>
-    </header>
-<div class="sale-banner">
 
-☀️ SUMMER SALE • LIMITED STOCK ☀️
-</div>
+<div class="sale-banner">☀️ SUMMER SALE • LIMITED STOCK ☀️</div>
 
-    <div class="container">
-        
-        <h2 class="collection-title">Men's Collection</h2>
+<div class="container">
 
-        <div class="perfume-list">
+  
+    <!-- MEN'S COLLECTION -->
+    <h2 class="collection-title" id="men-collection">Men's Collection</h2>
+    <div class="perfume-list">
 
-            <div class="perfume-item">
-                <div class="column-name">
-                    <h3>Gentleman EDP Givenchy (Complete) 100ml</h3>
-                    <div class="price-container">
-                        <span class="original-price">PHP 6,863.00</span> <span class="sale-price">PHP 6,100.00</span>
-                    </div>
+        <!-- Gentleman EDP Givenchy (Complete) -->
+        <div class="perfume-item">
+            <div class="column-name">
+                <h3>Gentleman EDP Givenchy (Complete) 100ml</h3>
+                <div class="price-container">
+                    <span class="original-price">PHP 6,863.00</span> 
+                    <span class="sale-price">PHP 6,100.00</span>
                 </div>
-                <div class="column-picture">
-                    <div class="image-placeholder">Image: gentleman_givenchy_edp_box.jpg</div>
-                </div>
-                <div class="column-description">
-                    <p>A sophisticated, powerful, and sensual **Floral Woody Musk** fragrance. A modern classic for the gentleman who commands respect.</p>
-                    <strong>Notes:</strong>
-                    <p><strong>Top:</strong> Black Pepper, Lavender, Bergamot.<br>
-                        <strong>Heart:</strong> Orris, Cinnamon, Clove.<br>
-                        <strong>Base:</strong> Black Vanilla Husk, Tolu Balsam, Patchouli, Benzoin.</p>
-                    </div>
             </div>
+            <div class="column-picture">
+                <img src="images/gentleman_givenchy_edp_box.jpg" alt="Gentleman EDP Givenchy Complete 100ml">
+            </div>
+            <div class="column-description">
+                <p>A sophisticated, powerful, and sensual <strong>Floral Woody Musk</strong> fragrance. A modern classic for the gentleman who commands respect.</p>
+                <strong>Notes:</strong>
+                <p><strong>Top:</strong> Black Pepper, Lavender, Bergamot.<br>
+                   <strong>Heart:</strong> Orris, Cinnamon, Clove.<br>
+                   <strong>Base:</strong> Black Vanilla Husk, Tolu Balsam, Patchouli, Benzoin.</p>
+            </div>
+        </div>
 
-            <div class="perfume-item">
+        <!-- Add other men's perfumes here --> <div class="perfume-item">
                 <div class="column-name">
                     <h3>Gentleman EDP Givenchy (Tester) 100ml</h3>
                     <div class="price-container">
@@ -669,31 +609,37 @@ header {
             </div>
             
         </div>
-        
-        <h2 class="collection-title">Women's Collection</h2>
 
-        <div class="perfume-list">
 
-            <div class="perfume-item">
-                <div class="column-name">
-                    <h3>Bvlgari Omnia Crystalline EDP 65ml</h3>
-                    <div class="price-container">
-                        <span class="original-price">PHP 788.00</span> <span class="sale-price">PHP 700.00</span>
-                    </div>
+    </div>
+
+    <!-- WOMEN'S COLLECTION -->
+    <h2 class="collection-title" id="women-collection">Women's Collection</h2>
+    <div class="perfume-list">
+
+        <!-- Example Women's Perfume -->
+        <div class="perfume-item">
+            <div class="column-name">
+                <h3>Bvlgari Omnia Crystalline EDP 65ml</h3>
+                <div class="price-container">
+                    <span class="original-price">PHP 788.00</span> 
+                    <span class="sale-price">PHP 700.00</span>
                 </div>
-                <div class="column-picture">
-                    <div class="image-placeholder">Image: bvlgari_omnia_crystalline_edp.jpg</div>
-                </div>
-                <div class="column-description">
-                    <p>Inspired by the clarity of crystal, this **Floral Woody Musk** scent is luminous and elegant. A delicate balance of aquatic freshness and light woods.</p>
-                    <strong>Notes:</strong>
-                    <p><strong>Top:</strong> Lotus, Mandarin Orange.<br>
-                        <strong>Heart:</strong> Heliotrope, Orris Root.<br>
-                        <strong>Base:</strong> Sandalwood, Musk, Siam Benzoin.</p>
-                    </div>
             </div>
+            <div class="column-picture">
+                <img src="images/bvlgari_omnia_crystalline_edp.jpg" alt="Bvlgari Omnia Crystalline EDP 65ml">
+            </div>
+            <div class="column-description">
+                <p>Inspired by the clarity of crystal, this <strong>Floral Woody Musk</strong> scent is luminous and elegant. A delicate balance of aquatic freshness and light woods.</p>
+                <strong>Notes:</strong>
+                <p><strong>Top:</strong> Lotus, Mandarin Orange.<br>
+                   <strong>Heart:</strong> Heliotrope, Orris Root.<br>
+                   <strong>Base:</strong> Sandalwood, Musk, Siam Benzoin.</p>
+            </div>
+        </div>
 
-            <div class="perfume-item">
+        <!-- Add other women's perfumes here -->
+<div class="perfume-item">
                 <div class="column-name">
                     <h3>Miss Dior EDP (2021) 100ml</h3>
                     <div class="price-container">
@@ -828,6 +774,5 @@ header {
             </div>
 
         </div> 
-    </div>
 </body>
 </html>
